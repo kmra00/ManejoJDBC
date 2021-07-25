@@ -14,5 +14,12 @@ public class ManejoPersonas {
         for (Persona persona : personas) {
             System.out.println("persona: " + persona);
         }
+        Persona persona = new Persona();
+        persona.setNombre("Maria");
+        persona.setApellido("Lara");
+        persona.setEmail("email@kjldkjlsd.com");
+        persona.setTelefono("45546546547");
+        
+        personaJDBC.insert(persona);
     }
 }
