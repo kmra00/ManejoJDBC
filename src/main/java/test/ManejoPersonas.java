@@ -14,7 +14,12 @@ public class ManejoPersonas {
         for (Persona persona : personas) {
             System.out.println("persona: " + persona);
         }
+<<<<<<< HEAD
 
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> v1.2.0
         //prueba de insert
 //        Persona persona = new Persona();
 //        persona.setNombre("Maria");
@@ -36,6 +41,10 @@ public class ManejoPersonas {
         persona.setId_persona(3);
         personaJDBC.delete(persona);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Stashed changes
+>>>>>>> v1.2.0
     }
 }

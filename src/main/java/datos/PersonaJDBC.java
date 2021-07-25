@@ -47,7 +47,12 @@ public class PersonaJDBC {
         }
         return personas;
     }
+<<<<<<< HEAD
 
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> v1.2.0
 
     public int insert(Persona persona) {
         Connection conn = null;
@@ -121,4 +126,8 @@ public class PersonaJDBC {
         }
         return rows;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> v1.2.0
 }
