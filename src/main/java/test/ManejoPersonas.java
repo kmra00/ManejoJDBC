@@ -14,5 +14,29 @@ public class ManejoPersonas {
         for (Persona persona : personas) {
             System.out.println("persona: " + persona);
         }
+<<<<<<< Updated upstream
+=======
+        //prueba de insert
+//        Persona persona = new Persona();
+//        persona.setNombre("Maria");
+//        persona.setApellido("Lara");
+//        persona.setEmail("email@kjldkjlsd.com");
+//        persona.setTelefono("45546546547");
+//        
+//        personaJDBC.insert(persona);
+
+//prueba de update
+//        Persona persona = new Persona();
+//        persona.setId_persona(6);
+//        persona.setNombre("Camila");
+//        persona.setApellido("Lara");
+//        persona.setEmail("mlara@gmail.com");
+//        persona.setTelefono("555665545");
+//        personaJDBC.update(persona);
+        Persona persona = new Persona();
+        persona.setId_persona(3);
+        personaJDBC.delete(persona);
+
+>>>>>>> Stashed changes
     }
 }

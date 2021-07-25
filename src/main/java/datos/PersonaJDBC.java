@@ -47,4 +47,80 @@ public class PersonaJDBC {
         }
         return personas;
     }
+<<<<<<< Updated upstream
+=======
+
+    public int insert(Persona persona) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int rows = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_INSERT);
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellido());
+            stmt.setString(3, persona.getEmail());
+            stmt.setString(4, persona.getTelefono());
+
+            System.out.println("ejecutando query:" + SQL_INSERT);
+            rows = stmt.executeUpdate();
+            System.out.println("Registros afectados:" + rows);
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            Conexion.close(stmt);
+            Conexion.close(conn);
+
+        }
+        return rows;
+    }
+
+    public int update(Persona persona) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int rows = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            System.out.println("ejecutando query:" + SQL_UPDATE);
+            stmt = conn.prepareStatement(SQL_UPDATE);
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellido());
+            stmt.setString(3, persona.getEmail());
+            stmt.setString(4, persona.getTelefono());
+            stmt.setInt(5, persona.getId_persona());
+
+            rows = stmt.executeUpdate();
+            System.out.println("Registros actualizados :" + rows);
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            Conexion.close(stmt);
+            Conexion.close(conn);
+        }
+        return rows;
+    }
+
+    public int delete(Persona persona) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int rows = 0;
+        try {
+            conn = Conexion.getConnection();
+            System.out.println("ejecutando query de :" + SQL_DELETE);
+            stmt = conn.prepareStatement(SQL_DELETE);
+            stmt.setInt(1, persona.getId_persona());
+            rows = stmt.executeUpdate();
+            System.out.println("Registros eliminados :" + rows);
+
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            Conexion.close(stmt);
+            Conexion.close(conn);
+        }
+        return rows;
+    }
+>>>>>>> Stashed changes
 }
